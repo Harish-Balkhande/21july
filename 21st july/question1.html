@@ -1,0 +1,39 @@
+<!-- 
+Question 1: 
+            Write a program that will iterate over an array of colors and change 
+the background of the page after 5 seconds. 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assignment</title>
+
+     <script>
+        // const dmode = document.getElementById("dark");
+        // dmode.onclick = changeColor();
+         let colorArr = ["gray","cyan","white"]
+         let i=0;
+         function changeColor()
+         {
+            document.body.style.backgroundColor = colorArr[i];
+            i++;
+            if(i > colorArr.length-1) 
+            {
+               i=0;
+            }
+            
+         }
+         setInterval(changeColor,3000)
+        </script>
+
+ </head>
+ <body>
+    <h1>Question 1: Write a program that will iterate over an array of colors and 
+   change the background of the page after 5 seconds. </h1>
+    <hr>
+    </body>
+ </html>
+ 

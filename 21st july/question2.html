@@ -1,0 +1,49 @@
+<!-- 
+Question 2: 
+            Write a program that will display the multiplication table of a number 
+on the webpage in a proper format. Take the input from the user. 
+Input - 5 
+Output - 5 x 1 = 5    5 x 2 = 10      and so on… 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assignment</title>
+
+     <script type ="text/javascript">
+        function getInput()
+        {
+            // let usrVal = document.getElementById('inputVal').value;
+            let num;
+			num = Number(document.getElementById('inputVal').value);
+			for(var i=1; i<=10; i++)
+            {
+				let pTag= document.getElementById('TPrint');
+				pTag.innerHTML += num + "x" + i + "=" + (num*i) + "<br/>" 
+            }
+        } 
+        function backgrounColor()     
+        {
+            let setBackground = document.body.style.backgroundColor();
+            setBackground.classList.toggle('gray');
+        }
+        backgroundColor();               
+     </script>
+ </head>
+ <body>
+     <h1>Question 2: 
+        Write a program that will display the multiplication table of a number 
+on the webpage in a proper format. Take the input from the user. 
+Input - 5 
+Output - 5 x 1 = 5    5 x 2 = 10      and so on… </h1>
+<hr>
+
+    Enter the value : <input type="text" id="inputVal">
+    <input type="button" value="submit" onclick="getInput()"> <br>
+    output:
+    <p id="TPrint"></p>
+ </body>
+ </html>

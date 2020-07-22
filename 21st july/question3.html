@@ -1,0 +1,50 @@
+<!-- 
+Question 3: 
+            Make a webpage that will ask the name of the user. Then will display 
+a welcome message on the webpage. Also the webpage should also have a clock. 
+Using the toggle method of classList add a dark mode feature to the website. 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assignment</title>
+
+     <script defer>
+         
+         function clock()
+         {
+            const ctime = document.getElementById('time');
+            let date = new Date();
+            let time = date.toLocaleString();
+            ctime.innerText = time;
+         }
+         setInterval(clock,1000);
+
+         function getValue()
+         {
+            let guest = document.getElementById('inputVal').value;
+            let msg = document.getElementById('TPrint') 
+            msg.innerHTML += "Welcome "+guest;
+            msg.style.color = "Violet"
+         }
+        
+     </script>
+ </head>
+ <body id="backColor">
+     <p>
+        Question 3: 
+        Make a webpage that will ask the name of the user. Then will display 
+        a welcome message on the webpage. Also the webpage should also have a clock. 
+        Using the toggle method of classList add a dark mode feature to the website. 
+     </p>
+     <hr>
+     <h1 id="time"></h1> <br>
+     Enter the value : <input type="text" id="inputVal">
+    <input type="button" value="submit" onclick="getValue()"> <br>
+    output:
+    <p id="TPrint"></p>
+ </body>
+ </html>
